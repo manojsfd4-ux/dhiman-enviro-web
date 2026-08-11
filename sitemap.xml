@@ -1,183 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-<url>
-<loc>https://www.dhimanenviro.com</loc>
-<lastmod>2026-08-08T03:33:40.616Z</lastmod>
-<changefreq>monthly</changefreq>
-<priority>1</priority>
-</url>
-<url>
-<loc>https://www.dhimanenviro.com/about</loc>
-<lastmod>2026-08-08T03:33:40.616Z</lastmod>
-<changefreq>monthly</changefreq>
-<priority>0.7</priority>
-</url>
-<url>
-<loc>https://www.dhimanenviro.com/products</loc>
-<lastmod>2026-08-08T03:33:40.616Z</lastmod>
-<changefreq>monthly</changefreq>
-<priority>0.7</priority>
-</url>
-<url>
-<loc>https://www.dhimanenviro.com/factory</loc>
-<lastmod>2026-08-08T03:33:40.616Z</lastmod>
-<changefreq>monthly</changefreq>
-<priority>0.7</priority>
-</url>
-<url>
-<loc>https://www.dhimanenviro.com/quality</loc>
-<lastmod>2026-08-08T03:33:40.616Z</lastmod>
-<changefreq>monthly</changefreq>
-<priority>0.7</priority>
-</url>
-<url>
-<loc>https://www.dhimanenviro.com/gallery</loc>
-<lastmod>2026-08-08T03:33:40.616Z</lastmod>
-<changefreq>monthly</changefreq>
-<priority>0.7</priority>
-</url>
-<url>
-<loc>https://www.dhimanenviro.com/exports</loc>
-<lastmod>2026-08-08T03:33:40.616Z</lastmod>
-<changefreq>monthly</changefreq>
-<priority>0.7</priority>
-</url>
-<url>
-<loc>https://www.dhimanenviro.com/dealers</loc>
-<lastmod>2026-08-08T03:33:40.616Z</lastmod>
-<changefreq>monthly</changefreq>
-<priority>0.7</priority>
-</url>
-<url>
-<loc>https://www.dhimanenviro.com/downloads</loc>
-<lastmod>2026-08-08T03:33:40.616Z</lastmod>
-<changefreq>monthly</changefreq>
-<priority>0.7</priority>
-</url>
-<url>
-<loc>https://www.dhimanenviro.com/faq</loc>
-<lastmod>2026-08-08T03:33:40.616Z</lastmod>
-<changefreq>monthly</changefreq>
-<priority>0.7</priority>
-</url>
-<url>
-<loc>https://www.dhimanenviro.com/contact</loc>
-<lastmod>2026-08-08T03:33:40.616Z</lastmod>
-<changefreq>monthly</changefreq>
-<priority>0.7</priority>
-</url>
-<url>
-<loc>https://www.dhimanenviro.com/privacy</loc>
-<lastmod>2026-08-08T03:33:40.616Z</lastmod>
-<changefreq>monthly</changefreq>
-<priority>0.7</priority>
-</url>
-<url>
-<loc>https://www.dhimanenviro.com/terms</loc>
-<lastmod>2026-08-08T03:33:40.616Z</lastmod>
-<changefreq>monthly</changefreq>
-<priority>0.7</priority>
-</url>
-<url>
-<loc>https://www.dhimanenviro.com/products/automatic-control-panel</loc>
-<lastmod>2026-08-08T03:33:40.616Z</lastmod>
-<changefreq>monthly</changefreq>
-<priority>0.8</priority>
-</url>
-<url>
-<loc>https://www.dhimanenviro.com/products/automatic-pan-feeding-system</loc>
-<lastmod>2026-08-08T03:33:40.616Z</lastmod>
-<changefreq>monthly</changefreq>
-<priority>0.8</priority>
-</url>
-<url>
-<loc>https://www.dhimanenviro.com/products/feed-silo</loc>
-<lastmod>2026-08-08T03:33:40.616Z</lastmod>
-<changefreq>monthly</changefreq>
-<priority>0.8</priority>
-</url>
-<url>
-<loc>https://www.dhimanenviro.com/products/godown-hopper</loc>
-<lastmod>2026-08-08T03:33:40.616Z</lastmod>
-<changefreq>monthly</changefreq>
-<priority>0.8</priority>
-</url>
-<url>
-<loc>https://www.dhimanenviro.com/products/cooling-pad-system</loc>
-<lastmod>2026-08-08T03:33:40.616Z</lastmod>
-<changefreq>monthly</changefreq>
-<priority>0.8</priority>
-</url>
-<url>
-<loc>https://www.dhimanenviro.com/products/nipple-drinking-system</loc>
-<lastmod>2026-08-08T03:33:40.616Z</lastmod>
-<changefreq>monthly</changefreq>
-<priority>0.8</priority>
-</url>
-<url>
-<loc>https://www.dhimanenviro.com/products/box-fan</loc>
-<lastmod>2026-08-08T03:33:40.616Z</lastmod>
-<changefreq>monthly</changefreq>
-<priority>0.8</priority>
-</url>
-<url>
-<loc>https://www.dhimanenviro.com/products/push-pull-fan</loc>
-<lastmod>2026-08-08T03:33:40.616Z</lastmod>
-<changefreq>monthly</changefreq>
-<priority>0.8</priority>
-</url>
-<url>
-<loc>https://www.dhimanenviro.com/products/3-blade-cone-fan</loc>
-<lastmod>2026-08-08T03:33:40.616Z</lastmod>
-<changefreq>monthly</changefreq>
-<priority>0.8</priority>
-</url>
-<url>
-<loc>https://www.dhimanenviro.com/products/36-inch-ventilation-fan</loc>
-<lastmod>2026-08-08T03:33:40.616Z</lastmod>
-<changefreq>monthly</changefreq>
-<priority>0.8</priority>
-</url>
-<url>
-<loc>https://www.dhimanenviro.com/products/tunnel-door-system</loc>
-<lastmod>2026-08-08T03:33:40.616Z</lastmod>
-<changefreq>monthly</changefreq>
-<priority>0.8</priority>
-</url>
-<url>
-<loc>https://www.dhimanenviro.com/products/air-inlet-system</loc>
-<lastmod>2026-08-08T03:33:40.616Z</lastmod>
-<changefreq>monthly</changefreq>
-<priority>0.8</priority>
-</url>
-<url>
-<loc>https://www.dhimanenviro.com/products/feeding-line</loc>
-<lastmod>2026-08-08T03:33:40.616Z</lastmod>
-<changefreq>monthly</changefreq>
-<priority>0.8</priority>
-</url>
-<url>
-<loc>https://www.dhimanenviro.com/products/gas-brooder</loc>
-<lastmod>2026-08-08T03:33:40.616Z</lastmod>
-<changefreq>monthly</changefreq>
-<priority>0.8</priority>
-</url>
-<url>
-<loc>https://www.dhimanenviro.com/products/insulation-sheet</loc>
-<lastmod>2026-08-08T03:33:40.616Z</lastmod>
-<changefreq>monthly</changefreq>
-<priority>0.8</priority>
-</url>
-<url>
-<loc>https://www.dhimanenviro.com/products/rubber-cage-matt</loc>
-<lastmod>2026-08-08T03:33:40.616Z</lastmod>
-<changefreq>monthly</changefreq>
-<priority>0.8</priority>
-</url>
-<url>
-<loc>https://www.dhimanenviro.com/products/racking-machine</loc>
-<lastmod>2026-08-08T03:33:40.616Z</lastmod>
-<changefreq>monthly</changefreq>
-<priority>0.8</priority>
-</url>
+  <url><loc>https://www.dhimanenviro.com/about/</loc><priority>0.6</priority></url>
+  <url><loc>https://www.dhimanenviro.com/contact/</loc><priority>0.6</priority></url>
+  <url><loc>https://www.dhimanenviro.com/dealers/</loc><priority>0.6</priority></url>
+  <url><loc>https://www.dhimanenviro.com/downloads/</loc><priority>0.6</priority></url>
+  <url><loc>https://www.dhimanenviro.com/exports/</loc><priority>0.6</priority></url>
+  <url><loc>https://www.dhimanenviro.com/factory/</loc><priority>0.6</priority></url>
+  <url><loc>https://www.dhimanenviro.com/faq/</loc><priority>0.6</priority></url>
+  <url><loc>https://www.dhimanenviro.com/gallery/</loc><priority>0.6</priority></url>
+  <url><loc>https://www.dhimanenviro.com/</loc><priority>1.0</priority></url>
+  <url><loc>https://www.dhimanenviro.com/privacy/</loc><priority>0.6</priority></url>
+  <url><loc>https://www.dhimanenviro.com/products/3-blade-cone-fan/</loc><priority>0.8</priority></url>
+  <url><loc>https://www.dhimanenviro.com/products/36-inch-ventilation-fan/</loc><priority>0.8</priority></url>
+  <url><loc>https://www.dhimanenviro.com/products/air-inlet-system/</loc><priority>0.8</priority></url>
+  <url><loc>https://www.dhimanenviro.com/products/automatic-control-panel/</loc><priority>0.8</priority></url>
+  <url><loc>https://www.dhimanenviro.com/products/automatic-pan-feeding-system/</loc><priority>0.8</priority></url>
+  <url><loc>https://www.dhimanenviro.com/products/box-fan/</loc><priority>0.8</priority></url>
+  <url><loc>https://www.dhimanenviro.com/products/cooling-pad-system/</loc><priority>0.8</priority></url>
+  <url><loc>https://www.dhimanenviro.com/products/feed-silo/</loc><priority>0.8</priority></url>
+  <url><loc>https://www.dhimanenviro.com/products/feeding-line/</loc><priority>0.8</priority></url>
+  <url><loc>https://www.dhimanenviro.com/products/gas-brooder/</loc><priority>0.8</priority></url>
+  <url><loc>https://www.dhimanenviro.com/products/godown-hopper/</loc><priority>0.8</priority></url>
+  <url><loc>https://www.dhimanenviro.com/products/</loc><priority>0.8</priority></url>
+  <url><loc>https://www.dhimanenviro.com/products/insulation-sheet/</loc><priority>0.8</priority></url>
+  <url><loc>https://www.dhimanenviro.com/products/nipple-drinking-system/</loc><priority>0.8</priority></url>
+  <url><loc>https://www.dhimanenviro.com/products/push-pull-fan/</loc><priority>0.8</priority></url>
+  <url><loc>https://www.dhimanenviro.com/products/racking-machine/</loc><priority>0.8</priority></url>
+  <url><loc>https://www.dhimanenviro.com/products/rubber-cage-matt/</loc><priority>0.8</priority></url>
+  <url><loc>https://www.dhimanenviro.com/products/tunnel-door-system/</loc><priority>0.8</priority></url>
+  <url><loc>https://www.dhimanenviro.com/quality/</loc><priority>0.6</priority></url>
+  <url><loc>https://www.dhimanenviro.com/terms/</loc><priority>0.6</priority></url>
 </urlset>
