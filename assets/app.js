@@ -106,7 +106,7 @@
   @keyframes deT{0%,60%,100%{opacity:.3}30%{opacity:1}}\
   .de-mob{position:fixed;left:0;right:0;bottom:0;z-index:65;background:#fff;border-top:1px solid var(--line);display:none;padding:10px 12px calc(10px + env(safe-area-inset-bottom));gap:8px;box-shadow:0 -6px 24px rgba(22,20,58,.1)}\
   .de-mob a{flex:1;text-align:center;justify-content:center;padding:12px 8px;font-size:14px}\
-  @media(max-width:640px){.de-mob{display:flex}.de-launch{bottom:78px;right:14px}.de-panel{bottom:78px;right:14px;height:min(520px,calc(100vh - 120px))}.wa-float{display:none}}\
+  @media(max-width:640px){.de-mob{display:flex}.de-launch{bottom:78px;right:14px}.de-panel{bottom:78px;right:14px;height:min(520px,calc(100vh - 120px))}.wa-float{display:none}.de-bub{display:none}.de-fab.wa{display:none}.de-fab{width:48px;height:48px}body{padding-bottom:72px}}\
   ';
   var st = document.createElement("style"); st.textContent = css; document.head.appendChild(st);
 
@@ -148,6 +148,7 @@
       panel = document.getElementById("dePanel"),
       input = document.getElementById("deInput"),
       bub = document.getElementById("deBub");
+  if (bub) setTimeout(function () { if (bub) bub.style.display = "none"; }, 8000);
 
   function scroll() { log.scrollTop = log.scrollHeight; }
   function bot(htmlText, chips) {
