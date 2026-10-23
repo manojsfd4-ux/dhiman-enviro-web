@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://www.dhimanenviro.com/sitemap.xml
+Sitemap: https://dhimanenviro.com/sitemap.xml
