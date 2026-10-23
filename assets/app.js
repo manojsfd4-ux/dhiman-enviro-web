@@ -309,3 +309,12 @@
     })
     .catch(function () { el.style.display = "none"; });
 })();
+
+/* ---------------- mobile menu: close after tapping a link ---------------- */
+(function () {
+  var menu = document.querySelector(".menu");
+  if (!menu) return;
+  menu.addEventListener("click", function (e) {
+    if (e.target.closest("a")) menu.classList.remove("open");
+  });
+})();

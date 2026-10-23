@@ -67,6 +67,7 @@
   .nav-phone{font-family:var(--mono);font-size:14px;font-weight:500;color:var(--ink);display:inline-flex;align-items:center;gap:7px}
   .burger{display:none;background:none;border:none;cursor:pointer;padding:8px}
   @media(max-width:1024px){.menu,.nav-phone{display:none}.burger{display:block}}
+  @media(max-width:1024px){header .nav{position:relative}.menu.open{display:flex;flex-direction:column;align-items:stretch;gap:0;position:absolute;top:74px;left:0;right:0;background:#fff;border-bottom:1px solid var(--line);box-shadow:0 20px 40px rgba(22,20,58,.12);padding:8px 16px 16px;max-height:calc(100vh - 74px);overflow-y:auto}.menu.open>a,.menu.open .drop>button{padding:14px 4px;border-bottom:1px solid var(--line);font-size:16px;width:100%;justify-content:space-between}.menu.open .drop-panel{position:static;transform:none;opacity:1;visibility:visible;min-width:0;box-shadow:none;border:none;padding:0 0 8px 8px;grid-template-columns:1fr}}
 
   /* split hero */
   .hero{background:var(--ink);color:#fff;overflow:hidden}
@@ -281,6 +282,7 @@
       <a href="/#projects">Projects</a>
       <a href="/#quality">Quality</a>
       <a href="/#service">Service</a>
+      <a href="/about/">About</a>
       <a href="/#contact">Contact</a>
     </nav>
     <div class="nav-cta">
@@ -366,7 +368,7 @@
       </div>
       <div>
         <h4>Company</h4>
-        <a href="/#quality">Quality</a><a href="/#projects">Projects</a><a href="/#service">Service</a><a href="/#contact">Contact</a>
+        <a href="/about/">About us</a><a href="/#quality">Quality</a><a href="/#projects">Projects</a><a href="/#service">Service</a><a href="/#contact">Contact</a>
       </div>
       <div>
         <h4>Reach us</h4>
