@@ -285,3 +285,27 @@
     out.scrollIntoView({ behavior: "smooth", block: "nearest" });
   };
 })();
+
+/* ---------------- visitor counter (footer) ---------------- */
+(function () {
+  var NS = "dhimanenviro.com", KEY = "visitors";
+  var bot = document.querySelector(".foot-bot");
+  if (!bot) return;
+  var el = document.createElement("span");
+  el.id = "visitor-counter";
+  el.style.cssText = "flex-basis:100%;display:flex;align-items:center;gap:8px;color:#9fa0c0";
+  el.innerHTML = "<svg width='14' height='14' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path d='M1 12s4-7 11-7 11 7 11 7-4 7-11 7S1 12 1 12z'/><circle cx='12' cy='12' r='3'/></svg><span>Visitors: <b id='visitor-count' style='color:#cfd0e6;font-weight:600'>…</b></span>";
+  bot.appendChild(el);
+  var counted = false;
+  try { counted = sessionStorage.getItem("de_visit_counted") === "1"; } catch (e) {}
+  var url = "https://abacus.jasoncameron.dev/" + (counted ? "get" : "hit") + "/" + NS + "/" + KEY;
+  fetch(url, { cache: "no-store" })
+    .then(function (r) { return r.json(); })
+    .then(function (d) {
+      if (d && typeof d.value === "number") {
+        document.getElementById("visitor-count").textContent = d.value.toLocaleString("en-IN");
+        try { sessionStorage.setItem("de_visit_counted", "1"); } catch (e) {}
+      } else { el.style.display = "none"; }
+    })
+    .catch(function () { el.style.display = "none"; });
+})();
