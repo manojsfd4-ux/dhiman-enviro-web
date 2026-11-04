@@ -264,6 +264,45 @@
   .fq details p{margin-top:10px;color:var(--muted);font-size:15px}
   @media(max-width:900px){.evfaq .wrap{grid-template-columns:1fr}}
   .fd{display:block;font-family:var(--mono);font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:#7c7da0;margin-top:12px}
+
+  /* ---- motion (only when the visitor has not asked for reduced motion) ---- */
+  .airflow{margin:6px 0 34px;border:1px solid rgba(255,255,255,.12);border-radius:18px;background:rgba(255,255,255,.03);padding:18px 20px 14px}
+  .airflow svg{display:block;width:100%;height:auto}
+  .airflow .af-m{display:none}
+  @media(max-width:640px){.airflow{padding:14px 14px 12px}.airflow .af-d{display:none}.airflow .af-m{display:block}.airflow .lbl{font-size:10px;letter-spacing:.08em}.airflow .lbl span:nth-child(2){display:none}.airflow .lbl span{max-width:48%}.airflow .lbl span:last-child{text-align:right}}
+  .airflow .lbl{display:flex;justify-content:space-between;font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:#a7a8c6;margin-top:10px}
+  .airflow .lbl b{color:#5fe08a;font-weight:500}
+  .trust .mqw .dup{display:none}
+  .trust .mqw{overflow:hidden;margin-top:22px;-webkit-mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent);mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent)}
+  .trust .mqw .row{margin-top:0}
+  .fstep{transition:transform .25s,box-shadow .25s}
+  .fstep .ph{overflow:hidden}
+  .fstep .ph img{transition:transform .5s}
+  .fstep:hover{transform:translateY(-4px);box-shadow:0 20px 44px rgba(0,0,0,.25)}
+  .fstep:hover .ph img{transform:scale(1.05)}
+  @media (prefers-reduced-motion: no-preference){
+    @keyframes heroUp{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:none}}
+    .hero-left .wrapx>*{animation:heroUp .7s cubic-bezier(.2,.7,.2,1) both}
+    .hero-left .wrapx>*:nth-child(2){animation-delay:.12s}
+    .hero-left .wrapx>*:nth-child(3){animation-delay:.24s}
+    .hero-left .wrapx>*:nth-child(4){animation-delay:.36s}
+    .hero-left .wrapx>*:nth-child(5){animation-delay:.48s}
+    @keyframes kb{from{transform:scale(1)}to{transform:scale(1.07)}}
+    .hero-right .sl.on img{animation:kb 7s ease-out both}
+    @keyframes spin{to{transform:rotate(360deg)}}
+    a.hs .fan{transform-origin:12px 12px;animation:spin 6s linear infinite}
+    a.hs:hover .fan{animation-duration:1.2s}
+    @keyframes flowx{to{stroke-dashoffset:-120}}
+    .airflow .w{animation:flowx 2.4s linear infinite}
+    .airflow .w2{animation-duration:3.1s}
+    .airflow .w3{animation-duration:2s}
+    @keyframes bladespin{to{transform:rotate(360deg)}}
+    .airflow .bl{transform-box:fill-box;transform-origin:center;animation:bladespin 1.4s linear infinite}
+    @keyframes mq{to{transform:translateX(-50%)}}
+    .trust .row.mq{flex-wrap:nowrap;justify-content:flex-start;width:max-content;animation:mq 38s linear infinite}
+    .trust .mqw .dup{display:contents}
+    .trust .mqw:hover .row.mq{animation-play-state:paused}
+  }
 </style>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"Dhiman Enviro Private Limited","url":"https://dhimanenviro.com/","logo":"https://dhimanenviro.com/logo.png","address":{"@type":"PostalAddress","streetAddress":"Near Hotel Ananta, Panipat Road","addressLocality":"Safidon","addressRegion":"Haryana","postalCode":"126112","addressCountry":"IN"},"telephone":"+917494962137","email":"poultry@dhimanenviro.com"}</script>
 </head>
@@ -338,7 +377,7 @@
   </div>
   <div class="hero-strip">
     <div class="wrap">
-      <a class="hs" href="/products/"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 12m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0M12 10c0-4 2-6 4-6s2 3 0 5M14 12c4 0 6 2 6 4s-3 2-5 0M12 14c0 4-2 6-4 6s-2-3 0-5M10 12c-4 0-6-2-6-4s3-2 5 0"/></svg><div><div class="k">01</div><div class="v">Ventilation</div></div></a>
+      <a class="hs" href="/products/"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><g class="fan"><path d="M12 12m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0M12 10c0-4 2-6 4-6s2 3 0 5M14 12c4 0 6 2 6 4s-3 2-5 0M12 14c0 4-2 6-4 6s-2-3 0-5M10 12c-4 0-6-2-6-4s3-2 5 0"/></g></svg><div><div class="k">01</div><div class="v">Ventilation</div></div></a>
       <a class="hs" href="/products/"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M4 6l16 12M20 6L4 18"/></svg><div><div class="k">02</div><div class="v">Cooling</div></div></a>
       <a class="hs" href="/products/"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16l-6 8v6l-4 2v-8z"/></svg><div><div class="k">03</div><div class="v">Feeding</div></div></a>
       <a class="hs" href="/products/"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3s-6 7-6 11a6 6 0 0 0 12 0c0-4-6-11-6-11z"/></svg><div><div class="k">04</div><div class="v">Drinking</div></div></a>
@@ -359,9 +398,7 @@
 <section class="trust">
   <div class="wrap">
     <span class="eyebrow">Trusted by integrators, producer companies and hatcheries</span>
-    <div class="row">
-      <span>Venky&rsquo;s (India) Ltd</span><span>MP Women Poultry Producer Co.</span><span>Jharkhand Women Poultry Producer Co.</span><span>Janta Group</span><span>Big Bird Breeders</span><span>Perfect Hatchery</span><span>MD Hatchery</span>
-    </div>
+    <div class="mqw"><div class="row mq"><span>Venky&rsquo;s (India) Ltd</span><span>MP Women Poultry Producer Co.</span><span>Jharkhand Women Poultry Producer Co.</span><span>Janta Group</span><span>Big Bird Breeders</span><span>Perfect Hatchery</span><span>MD Hatchery</span><span class="dup" aria-hidden="true"><span>Venky&rsquo;s (India) Ltd</span><span>MP Women Poultry Producer Co.</span><span>Jharkhand Women Poultry Producer Co.</span><span>Janta Group</span><span>Big Bird Breeders</span><span>Perfect Hatchery</span><span>MD Hatchery</span></span></div></div>
   </div>
 </section>
 
@@ -413,6 +450,33 @@
       <p class="eyebrow" style="color:#5fe08a">How the shed breathes</p>
       <h2>Air in, over the birds, out.</h2>
       <p>Cooling pads draw fresh air in at one end. It travels the length of the house over the birds and is pulled out by exhaust fans at the other — all governed by one control panel.</p>
+    </div>
+    <div class="airflow rv" aria-hidden="true">
+      <svg viewBox="0 0 1000 120" class="af-d" preserveAspectRatio="xMidYMid meet">
+        <rect x="8" y="14" width="34" height="92" rx="4" fill="#7a4a2a" opacity=".85"/>
+        <g stroke="#9c6a44" stroke-width="2" opacity=".7"><path d="M14 20v80M22 20v80M30 20v80M38 20v80"/></g>
+        <g fill="none" stroke-linecap="round">
+          <path class="w" d="M50 36 C250 20 450 52 650 36 S850 24 940 36" stroke="#5fe08a" stroke-width="2.5" stroke-dasharray="14 16" opacity=".9"/>
+          <path class="w w2" d="M50 60 C250 74 450 46 650 60 S850 72 940 60" stroke="#8ff0ae" stroke-width="2" stroke-dasharray="10 18" opacity=".7"/>
+          <path class="w w3" d="M50 84 C250 70 450 98 650 84 S850 76 940 84" stroke="#5fe08a" stroke-width="2.5" stroke-dasharray="16 14" opacity=".85"/>
+        </g>
+        <g fill="#f2c94c" opacity=".9"><ellipse cx="330" cy="100" rx="9" ry="6"/><ellipse cx="380" cy="102" rx="8" ry="5.5"/><ellipse cx="470" cy="100" rx="9" ry="6"/><ellipse cx="560" cy="102" rx="8" ry="5.5"/><ellipse cx="640" cy="100" rx="9" ry="6"/></g>
+        <circle cx="966" cy="60" r="28" fill="none" stroke="#cfd0de" stroke-width="3"/>
+        <g class="bl" fill="#cfd0de"><path d="M966 60 L966 36 Q976 46 966 60Z"/><path d="M966 60 L987 72 Q973 75 966 60Z"/><path d="M966 60 L945 72 Q950 58 966 60Z"/></g>
+      </svg>
+      <svg class="af-m" viewBox="0 0 360 150" preserveAspectRatio="xMidYMid meet">
+        <rect x="4" y="16" width="26" height="118" rx="4" fill="#7a4a2a" opacity=".85"/>
+        <g stroke="#9c6a44" stroke-width="2" opacity=".7"><path d="M9 22v106M16 22v106M23 22v106"/></g>
+        <g fill="none" stroke-linecap="round">
+          <path class="w" d="M38 42 C110 30 190 56 300 42" stroke="#5fe08a" stroke-width="2.5" stroke-dasharray="12 14"/>
+          <path class="w w2" d="M38 72 C110 84 190 60 300 72" stroke="#8ff0ae" stroke-width="2" stroke-dasharray="9 15" opacity=".75"/>
+          <path class="w w3" d="M38 102 C110 90 190 114 300 102" stroke="#5fe08a" stroke-width="2.5" stroke-dasharray="14 12" opacity=".85"/>
+        </g>
+        <g fill="#f2c94c" opacity=".9"><ellipse cx="110" cy="132" rx="8" ry="5.5"/><ellipse cx="150" cy="134" rx="7" ry="5"/><ellipse cx="195" cy="132" rx="8" ry="5.5"/><ellipse cx="240" cy="134" rx="7" ry="5"/></g>
+        <circle cx="328" cy="72" r="26" fill="none" stroke="#cfd0de" stroke-width="3"/>
+        <g class="bl" fill="#cfd0de"><path d="M328 72 L328 50 Q337 60 328 72Z"/><path d="M328 72 L347 83 Q335 86 328 72Z"/><path d="M328 72 L309 83 Q313 70 328 72Z"/></g>
+      </svg>
+      <div class="lbl"><span><b>Cooling pad</b> &middot; cool air in</span><span>over the birds</span><span><b>Exhaust fans</b> &middot; warm air out</span></div>
     </div>
     <div class="flow-grid rv">
       <div class="fstep"><div class="ph"><img src="/gallery/cooling-feed.jpg" alt="Cooling pads and feeding lines inside a house"/></div><div class="t"><div class="k">01 — Air in</div><h3>Cooling pad system</h3><p>Evaporative pads at the inlet end cool and filter incoming air.</p></div></div>
