@@ -319,3 +319,15 @@
     if (e.target.closest("a")) menu.classList.remove("open");
   });
 })();
+
+/* ---------------- scroll to top (desktop) ---------------- */
+(function () {
+  var b = document.createElement("button");
+  b.setAttribute("aria-label", "Back to top");
+  b.innerHTML = "<svg width='18' height='18' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2.4' stroke-linecap='round'><path d='M18 15l-6-6-6 6'/></svg>";
+  b.style.cssText = "position:fixed;left:20px;bottom:20px;z-index:60;width:44px;height:44px;border-radius:50%;border:1px solid rgba(22,20,58,.15);background:#fff;color:#16143a;box-shadow:0 8px 24px rgba(22,20,58,.15);cursor:pointer;display:none;place-items:center";
+  document.body.appendChild(b);
+  b.onclick = function () { window.scrollTo({ top: 0, behavior: "smooth" }); };
+  function upd() { b.style.display = (window.innerWidth > 640 && window.scrollY > 700) ? "grid" : "none"; }
+  window.addEventListener("scroll", upd, { passive: true }); window.addEventListener("resize", upd); upd();
+})();
