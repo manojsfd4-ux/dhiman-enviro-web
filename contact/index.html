@@ -255,6 +255,7 @@
 
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"Dhiman Enviro Private Limited","alternateName":"Dhiman Enviro","url":"https://dhimanenviro.com/","logo":"https://dhimanenviro.com/logo.png","description":"Manufacturer of poultry ventilation, cooling, feeding, drinking, brooding and climate-control equipment.","address":{"@type":"PostalAddress","streetAddress":"Near Hotel Ananta, Panipat Road","addressLocality":"Safidon","addressRegion":"Haryana","postalCode":"126112","addressCountry":"IN"},"telephone":"+917494962137","email":"poultry@dhimanenviro.com","sameAs":[]}</script>
 
+<link rel="stylesheet" href="/assets/polish.css"/>
 </head>
 <body>
 <div class="util">
@@ -298,7 +299,7 @@
     </button>
   </div>
 </header>
-<section class="page-hero">
+<section class="page-hero" style="--hero-img:url(/gallery/broilers-fans.jpg)">
   <div class="wrap">
     <div class="crumb"><a href="/">Home</a> / Contact</div>
     <h1>Tell us the shed size. We'll specify the equipment.</h1>
@@ -329,17 +330,20 @@
       <div class="form" style="border:1px solid var(--line)">
         <h3>Request a quote</h3>
         <p class="sub">Fill this in and we'll continue on WhatsApp.</p>
-        <label>Your name</label>
-        <input id="f_name" placeholder="Name"/>
+        <label for="f_name">Your name</label>
+        <input id="f_name" type="text" autocomplete="name" placeholder="Name"/>
         <div class="two">
-          <div><label>Phone</label><input id="f_phone" placeholder="Mobile"/></div>
-          <div><label>Location</label><input id="f_loc" placeholder="Village / City"/></div>
+          <div><label for="f_phone">Phone</label><input id="f_phone" type="tel" inputmode="tel" autocomplete="tel" placeholder="Mobile"/></div>
+          <div><label for="f_loc">Village / City</label><input id="f_loc" type="text" autocomplete="address-level2" placeholder="Village / City"/></div>
         </div>
         <div class="two">
-          <div><label>Shed size</label><input id="f_size" placeholder="e.g. 300 x 40 ft"/></div>
-          <div><label>Bird count</label><input id="f_birds" placeholder="e.g. 20,000"/></div>
+          <div style="grid-column:1/-1"><label for="f_state">State</label><select id="f_state"><option value="">Select state</option><option>Andhra Pradesh</option><option>Arunachal Pradesh</option><option>Assam</option><option>Bihar</option><option>Chhattisgarh</option><option>Goa</option><option>Gujarat</option><option>Haryana</option><option>Himachal Pradesh</option><option>Jharkhand</option><option>Karnataka</option><option>Kerala</option><option>Madhya Pradesh</option><option>Maharashtra</option><option>Manipur</option><option>Meghalaya</option><option>Mizoram</option><option>Nagaland</option><option>Odisha</option><option>Punjab</option><option>Rajasthan</option><option>Sikkim</option><option>Tamil Nadu</option><option>Telangana</option><option>Tripura</option><option>Uttar Pradesh</option><option>Uttarakhand</option><option>West Bengal</option><option>Andaman &amp; Nicobar</option><option>Chandigarh</option><option>Dadra &amp; Nagar Haveli and Daman &amp; Diu</option><option>Delhi</option><option>Jammu &amp; Kashmir</option><option>Ladakh</option><option>Lakshadweep</option><option>Puducherry</option><option>Outside India</option></select></div>
         </div>
-        <label>What do you need?</label>
+        <div class="two">
+          <div><label for="f_size">Shed size</label><input id="f_size" type="text" placeholder="e.g. 300 x 40 ft"/></div>
+          <div><label for="f_birds">Bird count</label><input id="f_birds" type="text" inputmode="numeric" placeholder="e.g. 20,000"/></div>
+        </div>
+        <label for="f_need">What do you need?</label>
         <select id="f_need">
           <option>Whole house (all systems)</option><option>Ventilation</option><option>Cooling</option>
           <option>Feeding</option><option>Drinking</option><option>Climate control</option><option>Brooding &amp; housing</option>
@@ -353,7 +357,7 @@
 function sendWA(){
   var v=function(id){return (document.getElementById(id).value||'').trim();};
   var t="Hello Dhiman Enviro, I'd like a quote.%0A%0AName: "+encodeURIComponent(v('f_name'))+
-    "%0APhone: "+encodeURIComponent(v('f_phone'))+"%0ALocation: "+encodeURIComponent(v('f_loc'))+
+    "%0APhone: "+encodeURIComponent(v('f_phone'))+"%0ALocation: "+encodeURIComponent(v('f_loc'))+", "+encodeURIComponent(document.getElementById('f_state').value)+
     "%0AShed size: "+encodeURIComponent(v('f_size'))+"%0ABird count: "+encodeURIComponent(v('f_birds'))+
     "%0ANeed: "+encodeURIComponent(document.getElementById('f_need').value);
   window.open("https://wa.me/917494962137?text="+t,"_blank");

@@ -1,0 +1,45 @@
+/* Dhiman Enviro — shared visual polish for inner pages (loaded after each page's own styles) */
+
+/* page hero: soft photo on the right + green glow */
+.page-hero{position:relative;overflow:hidden;isolation:isolate}
+.page-hero::before{content:"";position:absolute;inset:0 0 0 38%;z-index:-2;background:var(--hero-img,none) center/cover no-repeat;opacity:.38;
+  -webkit-mask-image:linear-gradient(90deg,transparent,#000 55%);mask-image:linear-gradient(90deg,transparent,#000 55%)}
+.page-hero::after{content:"";position:absolute;z-index:-1;width:520px;height:520px;right:-140px;top:-260px;border-radius:50%;
+  background:radial-gradient(circle,rgba(95,224,138,.22),transparent 65%)}
+@media(max-width:700px){.page-hero::before{inset:0;opacity:.18;-webkit-mask-image:linear-gradient(180deg,#000,transparent);mask-image:linear-gradient(180deg,#000,transparent)}}
+
+/* photo-on-request placeholders */
+.noimg,.ph-req{position:relative;display:flex!important;flex-direction:column;align-items:center;justify-content:center;gap:12px;text-align:center;
+  background:linear-gradient(135deg,#eaf6ee 0%,#f6faf7 55%,#e3f1e8 100%)!important;color:var(--green-deep)}
+.noimg{aspect-ratio:4/3;border:1px solid var(--line);border-radius:20px;padding:24px}
+.ph-req svg,.noimg svg{color:var(--green);opacity:.9}
+.ph-req .t,.noimg .t{font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase}
+.noimg .s{font-size:14.5px;color:var(--muted);max-width:30ch;letter-spacing:0;text-transform:none;font-family:var(--body)}
+.noimg a{display:inline-block;padding:10px 6px;font-family:var(--body);font-weight:600;font-size:14px;color:var(--green-deep);letter-spacing:0;text-transform:none}
+.noimg::before,.ph-req::before{content:"";position:absolute;inset:0;border-radius:inherit;pointer-events:none;
+  background:repeating-linear-gradient(135deg,rgba(26,140,72,.05) 0 2px,transparent 2px 14px)}
+
+/* FAQ page: question list + side card */
+.faq-wrap{display:grid;grid-template-columns:minmax(0,1fr) 320px;gap:32px;align-items:start}
+.faq-side{position:sticky;top:100px;background:var(--ink);color:#fff;border-radius:20px;padding:26px}
+.faq-side h3{color:#fff;font-size:20px}
+.faq-side p{color:#cfd0de;font-size:15px;margin-top:10px}
+.faq-side .btn{width:100%;justify-content:center;margin-top:12px}
+@media(max-width:900px){.faq-wrap{grid-template-columns:1fr}.faq-side{position:static}}
+
+/* gentle hover lift on info boxes */
+.cbox,.panel,.step,.c{transition:transform .25s,box-shadow .25s}
+.cbox:hover,.c:hover{transform:translateY(-3px);box-shadow:0 16px 36px rgba(22,20,58,.08)}
+
+/* motion only for visitors who have not asked for less */
+@media (prefers-reduced-motion: no-preference){
+  @keyframes phUp{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:none}}
+  .page-hero .wrap>*{animation:phUp .7s cubic-bezier(.2,.7,.2,1) both}
+  .page-hero .wrap>*:nth-child(2){animation-delay:.1s}
+  .page-hero .wrap>*:nth-child(3){animation-delay:.2s}
+  .page-hero .wrap>*:nth-child(4){animation-delay:.3s}
+  @keyframes phZoom{from{transform:scale(1.08)}to{transform:scale(1)}}
+  .page-hero::before{animation:phZoom 1.6s ease-out both}
+  .gal img,.masonry img{transition:transform .5s}
+  .gal a:hover img,.masonry figure:hover img,.masonry a:hover img{transform:scale(1.04)}
+}
