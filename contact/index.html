@@ -377,6 +377,10 @@ function sendWA(){
           <div><label style="display:block;font-family:var(--mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-bottom:6px">Length (ft)</label><input id="es_len" type="number" placeholder="300" inputmode="numeric" style="width:100%;padding:12px 14px;border:1.5px solid var(--line);border-radius:11px;font-family:var(--body);font-size:15px;background:var(--bg)"/></div>
           <div><label style="display:block;font-family:var(--mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-bottom:6px">Width (ft)</label><input id="es_wid" type="number" placeholder="40" inputmode="numeric" style="width:100%;padding:12px 14px;border:1.5px solid var(--line);border-radius:11px;font-family:var(--body);font-size:15px;background:var(--bg)"/></div>
         </div>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:12px">
+          <div><label style="display:block;font-family:var(--mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-bottom:6px">Side height (ft)</label><input id="es_sh" type="number" placeholder="8" inputmode="decimal" style="width:100%;padding:12px 14px;border:1.5px solid var(--line);border-radius:11px;font-family:var(--body);font-size:15px;background:var(--bg)"/></div>
+          <div><label style="display:block;font-family:var(--mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-bottom:6px">Centre height (ft)</label><input id="es_ch" type="number" placeholder="10" inputmode="decimal" style="width:100%;padding:12px 14px;border:1.5px solid var(--line);border-radius:11px;font-family:var(--body);font-size:15px;background:var(--bg)"/></div>
+        </div>
         <button class="btn btn-primary" style="width:100%;justify-content:center;margin-top:16px" onclick="deEstimate()">Show my system &#8594;</button>
       </div>
       <div id="es_out"></div>

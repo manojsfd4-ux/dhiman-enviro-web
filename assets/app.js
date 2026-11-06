@@ -255,31 +255,56 @@
 
   /* ---------------- quote estimator (on pages that include it) ---------------- */
   window.deEstimate = function () {
-    var L = parseFloat(document.getElementById("es_len").value) || 0;
-    var W = parseFloat(document.getElementById("es_wid").value) || 0;
+    function v(id, d) { var e = document.getElementById(id); var x = e ? parseFloat(e.value) : NaN; return isFinite(x) && x > 0 ? x : d; }
+    var L = v("es_len", 0), W = v("es_wid", 0);
+    var sH = v("es_sh", 8), cH = v("es_ch", 10);
     var out = document.getElementById("es_out");
     if (!L || !W) { out.innerHTML = "<p style='color:var(--clay);font-size:14px'>Enter both length and width to see an indicative system.</p>"; return; }
-    var area = L * W;
-    var birds = Math.round(area / 1.1);
-    var fans = Math.max(2, Math.ceil(W / 8));
-    var pad = Math.round(W * 0.9);
-    var pans = Math.round(birds / 55);
-    var nipples = Math.round(birds / 12);
+    function fmt(n) { return Math.round(n).toLocaleString("en-IN"); }
+    var sqftPerBird = 0.8, maxWt = 2.2, nipDist = 9;
+    var avgH = (sH + cH) / 2;
+    var birds = L * W / sqftPerBird;
+    var cfmReq = L * W * avgH * 1.5;
+    var cone = L > 250;
+    var fanName = cone ? "Cone fan" : "Box fan";
+    var fanCfm = cone ? 23000 : 20000;
+    var q = cfmReq / fanCfm;
+    var fans = (q - Math.floor(q) > 0.3) ? Math.ceil(q) : Math.floor(q);
+    var minAx = L < 200 ? 2.2 : (L <= 300 ? 1.8 : 1.5);
+    var cs = W * avgH, vol = L * W * avgH;
+    for (var n = 1; n <= 300; n++) {
+      var t = n * fanCfm, p = 0, ax = t / vol >= minAx;
+      if (t / cs >= 400) p++;
+      if (t / (birds * maxWt) >= 5) p++;
+      if (ax) p++;
+      if (p >= 2 && ax) { if (n > fans) fans = n; break; }
+    }
+    var pad = Math.ceil(fans * 75 / 50) * 50;
+    var padType = W > 45 ? "C type" : "both sides";
+    var workL = Math.max(0, L - 10);
+    var nipLines = workL > 0 ? Math.ceil(birds * nipDist / (10 * workL * 12) - 1e-9) : 0;
+    var nipples = workL * 12 / nipDist * nipLines;
+    var feedLines = Math.max(0, nipLines - 1);
+    var feedFt = workL * feedLines;
+    var brooders = Math.ceil(birds / 10000 - 1e-9) + 1;
     out.innerHTML =
       "<div class='panel' style='margin-top:20px'>" +
       "<p class='eyebrow'>Indicative system</p>" +
       "<dl class='kv' style='margin-top:14px'>" +
-      "<dt>Floor area</dt><dd>" + area.toLocaleString() + " sq ft</dd>" +
-      "<dt>Approx. birds</dt><dd>" + birds.toLocaleString() + "</dd>" +
-      "<dt>Tunnel fans</dt><dd>~" + fans + " units</dd>" +
-      "<dt>Cooling pad wall</dt><dd>~" + pad + " ft</dd>" +
-      "<dt>Feeding pans</dt><dd>~" + pans.toLocaleString() + "</dd>" +
-      "<dt>Nipple points</dt><dd>~" + nipples.toLocaleString() + "</dd>" +
+      "<dt>Floor area</dt><dd>" + fmt(L * W) + " sq ft</dd>" +
+      "<dt>Approx. birds</dt><dd>" + fmt(birds) + " <span style='color:var(--muted);font-weight:400'>(0.8 sq ft per bird)</span></dd>" +
+      "<dt>Air required</dt><dd>" + fmt(cfmReq) + " CFM</dd>" +
+      "<dt>Exhaust fans</dt><dd>" + fans + " × " + fanName + "</dd>" +
+      "<dt>Cooling pad</dt><dd>" + fmt(pad) + " sq ft (" + padType + ")</dd>" +
+      "<dt>Control panel</dt><dd>" + (fans + 1) + "-point</dd>" +
+      "<dt>Nipple drinking</dt><dd>" + nipLines + " lines · ~" + fmt(nipples) + " nipples</dd>" +
+      "<dt>Feeding line</dt><dd>" + feedLines + " lines · " + fmt(feedFt) + " running ft</dd>" +
+      "<dt>Gas brooders</dt><dd>" + brooders + "</dd>" +
       "</dl>" +
-      "<p style='color:var(--muted);font-size:13.5px;margin-top:16px;line-height:1.6'>These are rough starting figures based on floor area — not a quotation. Actual counts depend on climate, bird type, ceiling height and stocking density. Send it to us and we'll work out the exact specification.</p>" +
+      "<p style='color:var(--muted);font-size:13.5px;margin-top:16px;line-height:1.6'>Starting figures for a broiler house up to 2.2 kg, using " + sH + " ft side and " + cH + " ft centre height. Not a quotation — climate, bird type and shed details change the final specification. Send it to us and we'll work out the exact layout and price.</p>" +
       "<div style='display:flex;gap:10px;flex-wrap:wrap;margin-top:18px'>" +
       "<a class='btn btn-primary' href='https://wa.me/" + WA + "?text=" +
-        encodeURIComponent("Hello Dhiman Enviro, my shed is " + L + " x " + W + " ft (approx " + birds + " birds). Please send a quotation.") +
+        encodeURIComponent("Hello Dhiman Enviro, my shed is " + L + " x " + W + " ft (side " + sH + " ft, centre " + cH + " ft, approx " + fmt(birds) + " birds). Your site suggests " + fans + " " + fanName.toLowerCase() + "s and " + fmt(pad) + " sq ft cooling pad. Please send a quotation.") +
         "' target='_blank' rel='noopener'>Send this for a quote →</a>" +
       "<a class='btn btn-ghost' href='/contact/'>Contact form</a>" +
       "</div></div>";
